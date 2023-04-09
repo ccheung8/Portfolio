@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/34056e4715.js" crossorigin="anonymous"></script>
+  <script src="../scripts/node_modules/animejs/lib/anime.min.js"></script>
+  <title>Calvin.</title>
+  <link rel="stylesheet" media="screen" href="../css/styles.css">
+</head>
+<body>
+  <!-- Hamburger menu -->
+  <div id="menu">
+    <div class="menu-content">
+      <ul>
+        <li><a href="/">Work</a></li>
+        <li>
+          <a href="/playground/" id="play" class="active"><span class="letter">P</span><span class="letter">l</span><span class="letter">a</span><span class="letter">y</span></a>
+        </li>
+        <li><a href="/inspiration/">Inspiration</a></li>
+        <li><a href="/about/">Me</a></li>
+      </ul>
+      <li class="social">
+        <a href="#">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="brand">
+        <a href="/"><img src="../images/noto_panda.webp" alt="logo"></a>
+      </div>
+      <ul>
+        <a href="/">
+          <div class="link-container">
+            <li>Work</li>
+          </div>
+        </a>
+        <a href="/playground" id="play">
+          <div class="link-container">
+            <li class="active">
+              <span class="letter">P</span><span class="letter">l</span><span class="letter">a</span><span class="letter">y</span>
+            </li>
+          </div>
+        </a>
+        <a href="/inspiration/">
+          <div class="link-container">
+            <li>Inspiration</li>
+          </div>
+        </a>
+        <a href="/about/" id="me">
+          <div class="link-container">
+            <li>Me</li>
+          </div>
+        </a>
+      </ul>
+      <div id="hamburger">
+        <!-- hamburger visual -->
+        <div class="hamburger-icon">
+          <input type="checkbox" id="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="playground-header">
+      <div id="tiles"></div>
+      <h1 class="centered">Coming <span class="fancy">soon...</span></h1>
+      <i id="icon" class="fa-solid fa-play centered"></i>
+    </section>
+  </main>
+  
+  <footer>
+    <p class="footer-text">
+    Currently working on a website redesign for <a href="https://www.jewelsbythesea.biz/" target="_blank">Jewels by the Sea</a>, website for <a href="https://www.instagram.com/bobabarsd/?hl=en" target="_blank">Boba Bar</a>, website implementation for <a href="https://www.smallgoodsusa.com/" target="_blank">Smallgoods</a>, a design project with <a href="https://www.designforamerica.org/" target="_blank">Design for America</a>, and participating in the <a href="http://ddi.ucsd.edu/" target="_blank">Diabetes Design Initiative</a> in collaboration with Dexcom and the <a href="https://designlab.ucsd.edu/" target="_blank">UCSD Design Lab</a>.
+    </p>
+    <div class="footer-icons">
+      <li>
+        <ul>
+          <h6>Made with blood 🩸 sweat 💦 and tears 💧 by Calvin Cheung</h6>
+        </ul>
+      </li>
+      <li class="social">
+        <a href="#">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+    </div>
+  </footer>
+  <script src="../scripts/index.js"></script>
+  <script type="module">
+    const wrapper = document.getElementById("tiles");
+
+    // for header
+    // calc rows and cols for header
+    let columns = 0,
+      rows = 0,
+      toggled = false;
+
+    const handleOnClick = index => {
+      toggled = !toggled;
+      document.getElementById("playground-header").classList.toggle("toggled");
+
+      anime({
+        targets: ".tile",
+        opacity: toggled ? 0 : 1,
+        delay: anime.stagger(50, {
+          grid: [columns, rows],
+          from: index
+        })
+      });
+    }
+    
+    const createTile = index => {
+      // creates div
+      const tile = document.createElement("div");
+      // adds class of tile to div
+      tile.classList.add("tile");
+
+      tile.onclick = e => handleOnClick(index);
+
+      return tile;
+    }
+
+    const createTiles = quantity => {
+      // creates array with quantity
+      Array.from(Array(quantity)).map((tile, index) => {
+        // iterates over to append number of tiles
+        wrapper.appendChild(createTile(index));
+      });
+    }
+
+    createTiles(columns * rows);
+
+    const createGrid = () => {
+      // clears wrapper
+      wrapper.innerHTML = "";
+
+      const size = document.body.clientWidth > 800 ? 100 : 75;
+      // recalcs tiles
+      columns = Math.floor(document.body.clientWidth / size);
+      rows = Math.floor(document.body.clientHeight / size);
+
+      wrapper.style.setProperty("--columns", columns);
+      wrapper.style.setProperty("--rows", rows);
+
+      createTiles(columns * rows);
+    }
+
+    createGrid();
+
+    // adds resize listener to call createGrid
+    window.onresize = () => createGrid();
+  </script>
+</body>
+</html>

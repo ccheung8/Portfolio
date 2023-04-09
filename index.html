@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/34056e4715.js" crossorigin="anonymous"></script>
+  <title>Calvin.</title>
+  <link rel="stylesheet" media="screen" href="css/styles.css">
+</head>
+<body>
+  <!-- Hamburger menu -->
+  <div id="menu">
+    <div class="menu-content">
+      <ul>
+        <li><a href="/" class="active">Work</a></li>
+        <li>
+          <a href="playground/" id="play"><span class="letter">P</span><span class="letter">l</span><span class="letter">a</span><span class="letter">y</span></a>
+        </li>
+        <li><a href="inspiration/">Inspiration</a></li>
+        <li><a href="about/">Me</a></li>
+      </ul>
+      <li class="social">
+        <a href="#">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <nav id="navbar">
+      <div class="brand">
+        <a href="/"><img src="images/noto_panda.webp" alt="logo"></a>
+      </div>
+      <ul>
+        <a href="/">
+          <div class="link-container">
+            <li class="active">Work</li>
+          </div>
+        </a>
+        <a href="/playground" id="play">
+          <div class="link-container">
+            <li>
+              <span class="letter">P</span><span class="letter">l</span><span class="letter">a</span><span class="letter">y</span>
+            </li>
+          </div>
+        </a>
+        <a href="/inspiration/">
+          <div class="link-container">
+            <li>Inspiration</li>
+          </div>
+        </a>
+        <a href="/about/" id="me">
+          <div class="link-container">
+            <li>Me</li>
+          </div>
+        </a>
+      </ul>
+      <div id="hamburger">
+        <!-- hamburger visual -->
+        <div class="hamburger-icon">
+          <input type="checkbox" id="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div id="left-side" class="side">
+      <h2 class="title">
+        Hey I'm Calvin, a human-centered 
+        <span class="fancy">designer</span>
+      </h2>
+    </div>
+    <div id="right-side" class="side">
+      <h2 class="title">
+        Hey I'm Calvin, a human-centered 
+        <span class="fancy">developer</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <main>
+    <section id="work">
+      <div class="work-item">
+        <div class="work-thumbnail">
+            <!-- ADD LINK LATER -->
+            <a href="#">
+              <img class="fit" src="images/tfss_thumb.webp" alt="transfamily support services case study thumbnail">
+            </a>
+          </div>
+        <div class="work-content display">
+          <div class="work-info">
+            <h3>TransFamily Support Services</h3>
+            <h5 class="work-caption">Navigation for the Journey.</h5>
+          </div>
+          <p class="work-description">
+            A project I did for a local non-profit in San Diego as part of a summer design and marketing initiative.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">
+    Currently working on a website redesign for <a href="https://www.jewelsbythesea.biz/" target="_blank">Jewels by the Sea</a>, website for <a href="https://www.instagram.com/bobabarsd/?hl=en" target="_blank">Boba Bar</a>, website implementation for <a href="https://www.smallgoodsusa.com/" target="_blank">Smallgoods</a>, a design project with <a href="https://www.designforamerica.org/" target="_blank">Design for America</a>, and participating in the <a href="http://ddi.ucsd.edu/" target="_blank">Diabetes Design Initiative</a> in collaboration with Dexcom and the <a href="https://designlab.ucsd.edu/" target="_blank">UCSD Design Lab</a>.
+    </p>
+    <div class="footer-icons">
+      <li>
+        <ul>
+          <h6>Made with blood 🩸 sweat 💦 and tears 💧 by Calvin Cheung</h6>
+        </ul>
+      </li>
+      <li class="social">
+        <a href="#">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </li>
+    </div>
+  </footer>
+  <script src="scripts/index.js"></script>
+  <script type="module">
+    const left = document.getElementById("left-side");
+    const hero = document.getElementById("hero");
+    const nav = document.getElementsByTagName("nav");
+
+    // HERO ON HOME PAGE
+    const handleOnMove = e => {
+      // calcs width of window as percentage based on mouse pos
+      const p = e.clientX / window.innerWidth * 100;
+
+      // assigns to width attribute
+      left.style.width = `${p}%`;
+    }
+
+    // binds mouse move listeners
+    hero.onmousemove = e => handleOnMove(e);
+    // on touch for touchscreens
+    hero.ontouchmove = e => handleOnMove(e.touches[0]);
+  </script>
+</body>
+</html>
