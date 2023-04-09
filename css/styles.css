@@ -873,7 +873,18 @@ footer {
 
 /* MOBILE and below */
 @media only screen and (max-width: 768px) {
+  /* NAVIGATION */
+  nav {
+    padding: 0 24px;
+    width: calc(100vw - 48px);
+  }
+
   /* FOOTER */
+  footer {
+    padding: 0 24px;
+    width: calc(100vw - 48px);
+  }
+
   .footer-icons {
     flex-direction: column;
     align-items: center;
@@ -911,7 +922,7 @@ footer {
   }
 
   .neon {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 
   .value-item {
