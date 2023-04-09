@@ -961,3 +961,10 @@ footer {
     margin-top: 16px;
   }
 }
+
+/* Small mobile devices */
+@media only screen and (max-width: 480px) {
+  .neon {
+    font-size: 5rem;
+  }
+}
