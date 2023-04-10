@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/34056e4715.js" crossorigin="anonymous"></script>
-  <title>Calvin.</title>
+  <title>Calvin – Transfamily Support Services</title>
   <link rel="stylesheet" media="screen" href="css/styles.css">
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
@@ -78,43 +78,37 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div id="left-side" class="side">
-      <h2 class="title">
-        Hey I'm Calvin, a human-centered 
-        <span class="fancy">designer</span>
-      </h2>
-    </div>
-    <div id="right-side" class="side">
-      <h2 class="title">
-        Hey I'm Calvin, a human-centered 
-        <span class="fancy">developer</span>
-      </h2>
-    </div>
-  </section>
-
-  <!-- Work Section -->
   <main>
-    <section id="work">
-      <div class="work-item">
-        <div class="work-thumbnail">
-            <!-- ADD LINK LATER -->
-            <a href="/Transfamily_Support_Services.html">
-              <img class="fit" src="images/tfss_thumb.webp" alt="transfamily support services case study thumbnail">
-            </a>
-          </div>
-        <div class="work-content display">
-          <div class="work-info">
-            <h3>TransFamily Support Services</h3>
-            <h5 class="work-caption">Navigation for the Journey.</h5>
-          </div>
-          <p class="work-description">
-            A project I did for a local non-profit in San Diego as part of a summer design and marketing initiative.
-          </p>
-        </div>
+    <section id="case-header">
+      <img src="images/tfss_thumb.webp" alt="TransFamily Support Services thumbnail" class="fit">
+      <div class="header-content display">
+        <h2>TransFamily Support Services</h2>
+        <p>
+          As part of UC San Diego's Design Co 10 week summer design and marketing initiative, Build Up, my team was paired with TransFamily Support Services. TransFamily Support Services is a San Diego based LGBT non-profit that aims to be a one stop shop for helping transgender youth navigate through their journey
+        </p>
+        <h5>RESEARCH / UX DESIGN / WEB BUILDING</h5>
       </div>
     </section>
+    <section id="case-section" class="display">
+      <h2>Discovery Phase</h2>
+      <p>
+        We had a lot to learn about the site and industry including information architecture, possible usability heuristics that are violated, and how the site stacks up compared to other non-profits.
+      </p>
+    </section>
+    <div id="case-section" class="display">
+      <div class="left-card">
+        <h2>1.</h2>
+        <p>SITE MAP</p>
+        <h3>A site map allowed us to get a birds eye view of the website as well as learn the site’s organization.</h3>
+        <img src="images/initial_site_map.png" alt="Initial Site Map">
+      </div>
+      <div class="right-card">
+        <h2>2.</h2>
+        <p>WEB AUDIT</p>
+        <h3>Based on <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">Usability Heuristics</a>, we skimmed through the site and found possible pain points to work with.</h3>
+        <img src="images/website_audit.png" alt="Website audit on Transfamily Support Services website">
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -141,24 +135,5 @@
     </div>
   </footer>
   <script src="scripts/index.js"></script>
-  <script type="module">
-    const left = document.getElementById("left-side");
-    const hero = document.getElementById("hero");
-    const nav = document.getElementsByTagName("nav");
-
-    // HERO ON HOME PAGE
-    const handleOnMove = e => {
-      // calcs width of window as percentage based on mouse pos
-      const p = e.clientX / window.innerWidth * 100;
-
-      // assigns to width attribute
-      left.style.width = `${p}%`;
-    }
-
-    // binds mouse move listeners
-    hero.onmousemove = e => handleOnMove(e);
-    // on touch for touchscreens
-    hero.ontouchmove = e => handleOnMove(e.touches[0]);
-  </script>
 </body>
 </html>
