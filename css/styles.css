@@ -1270,10 +1270,19 @@ div[class$="card"]:nth-child(-n + 2) {
   .header-content > h5 {
     padding-top: 8px;
     font-size: 1.6rem;
+    line-height: 2.8rem;
   }
 
   .case-section {
     padding: 56px;
+  }
+
+  .case-section h2 {
+    line-height: 4.2rem;
+  }
+
+  .case-section h3 {
+    line-height: 3.2rem;
   }
 
   .case-section p {
@@ -1336,6 +1345,11 @@ div[class$="card"]:nth-child(-n + 2) {
   .before-after-gifs img {
     height: 200px;
     object-fit: contain;
+  }
+
+  .case-section ol {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
   }
 }
 
