@@ -1175,6 +1175,23 @@ div[class$="card"]:nth-child(-n + 2) {
     width: calc(100vw - 48px);
   }
 
+  #hamburger {
+    top: 13.5px;
+  }
+
+  .hamburger-icon span {
+    height: 3.5px;
+    margin-bottom: 5.5px;
+  }
+
+  .hamburger-icon input:checked ~ span {
+    transform: rotate(45deg) translate(-1px, -4.5px);
+  }
+
+  .hamburger-icon input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(0, -.8px);
+  }
+
   /* FOOTER */
   footer {
     padding: 0 24px;
