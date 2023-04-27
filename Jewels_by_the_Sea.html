@@ -424,23 +424,28 @@
       const slides = document.querySelectorAll(".section-img-carousel img");
       const dots = document.getElementsByClassName("dot");
       // Hides right arrow if max length reached
-      if (n >= slides.length) { 
-        const right = document.getElementById("right");
-        right.style.opacity = 0;
-        right.style.pointerEvents = "none";
-      } else {
-        right.style.opacity = 1;
-        right.style.pointerEvents = "all";
-      }
+      // if (n >= slides.length) { 
+      //   const right = document.getElementById("right");
+      //   right.style.opacity = 0;
+      //   right.style.pointerEvents = "none";
+      // } else {
+      //   right.style.opacity = 1;
+      //   right.style.pointerEvents = "all";
+      // }
       // hides left arrow if min length reached
-      if (n <= 1) {
-        const left = document.getElementById("left");
-        left.style.opacity = 0;
-        left.style.pointerEvents = "none";
-      } else {
-        left.style.opacity = 1;
-        left.style.pointerEvents = "all";
+      if (n < 1) {
+        // const left = document.getElementById("left");
+        // left.style.opacity = 0;
+        // left.style.pointerEvents = "none";
+        index = slides.length;
+      } 
+      if (n > slides.length) {
+        index = 1;
       }
+      // else {
+      //   left.style.opacity = 1;
+      //   left.style.pointerEvents = "all";
+      // }
 
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";

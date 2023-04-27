@@ -870,7 +870,6 @@ div[class$="card"]:nth-child(-n + 2) {
 }
 
 .screen-description p {
-  max-width: 70ch;
   text-align: left;
 }
 
@@ -1355,10 +1354,6 @@ div[class$="card"]:nth-child(-n + 2) {
     padding-bottom: 24px;
     align-self: center;
     width: 100%;
-  }
-
-  .screen-description p {
-    max-width: none;
   }
 
   .screen-description h3 {
