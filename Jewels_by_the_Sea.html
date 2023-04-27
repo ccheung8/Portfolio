@@ -434,7 +434,7 @@
       }
       // hides left arrow if min length reached
       if (n <= 1) {
-        left = document.getElementById("left");
+        const left = document.getElementById("left");
         left.style.opacity = 0;
         left.style.pointerEvents = "none";
       } else {
