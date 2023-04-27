@@ -851,6 +851,7 @@ div[class$="card"]:nth-child(-n + 2) {
 
 .final-img {
   grid-column: 1 / span 6;
+  grid-row: 1;
   width: 100%;
 }
 
@@ -873,10 +874,14 @@ div[class$="card"]:nth-child(-n + 2) {
 }
 
 .screen-description p {
-  margin-top: 8px;
   max-width: 70ch;
   text-align: left;
 }
+
+.screen-description h3 {
+  margin-bottom: 16px;
+}
+
 
 .case-paragraph {
   grid-column: 6 / span 7;
@@ -1174,6 +1179,7 @@ div[class$="card"]:nth-child(-n + 2) {
   .display {
     display: flex;
     flex-direction: column;
+    grid-column-gap: 0px;
   }
 
   .work-item {
@@ -1310,6 +1316,25 @@ div[class$="card"]:nth-child(-n + 2) {
     margin-top: 8px;
   }
 
+  .case-img-container {
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .case-img-container-lg {
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .comp-analysis-takeaways {
+    margin-top: 8px;
+    gap: 16px;
+  }
+
+  .comp-analysis-takeaways div:nth-last-child(-n+2) {
+    margin-top: 0;
+  }
+
   .before-after-gifs {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -1318,6 +1343,32 @@ div[class$="card"]:nth-child(-n + 2) {
 
   .takeaways p {
     margin-bottom: 16px;
+  }
+
+  .final-container {
+    width: 85%;
+    align-self: center;
+    padding-top: 24px;
+  }
+
+  .screen-description {
+    position: relative;
+    top: auto;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 24px;
+    align-self: center;
+    width: 100%;
+  }
+
+  .screen-description p {
+    max-width: none;
+  }
+
+  .screen-description h3 {
+    max-width: none;
+    margin-bottom: 16px;
+    text-align: left;
   }
 }
 
@@ -1507,6 +1558,20 @@ div[class$="card"]:nth-child(-n + 2) {
     margin-top: 8px;
   }
 
+  .case-img-container {
+    gap: 8px;
+  }
+
+  .case-img-container-lg {
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .case-img-container-lg img {
+    max-width: none;
+  }
 
   .before-after-gifs {
     display: flex;
@@ -1530,6 +1595,23 @@ div[class$="card"]:nth-child(-n + 2) {
     font-size: 1.6rem;
     line-height: 2.8rem;
   }
+
+  .takeaways p {
+    margin-top: 4px;
+  }
+
+  .final-container {
+    width: 100%;
+    padding-top: 8px;
+  }
+
+  .screen-description {
+    padding-bottom: 16px;
+  }
+
+  .screen-description h3 {
+    margin-bottom: 8px;
+  }
 }
 
 /* Small mobile devices */
@@ -1541,5 +1623,13 @@ div[class$="card"]:nth-child(-n + 2) {
   #inspiration-header > h2 {
     font-size: 2.4rem;
     line-height: 40px;
+  }
+
+  .case-section {
+    padding: 36px;
+  }
+
+  .header-content {
+    margin: 36px;
   }
 }
