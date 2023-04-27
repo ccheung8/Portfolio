@@ -836,10 +836,6 @@ div[class$="card"]:nth-child(-n + 2) {
   gap: 24px;
 }
 
-.case-img-container-lg img {
-  max-height: fit-content;
-}
-
 .final-container {
   grid-column: 1 / span 12;
   padding-top: 48px;
