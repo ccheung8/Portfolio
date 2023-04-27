@@ -1425,6 +1425,12 @@ div[class$="card"]:nth-child(-n + 2) {
   }
 
   /* WORK */
+  .side .title {
+    margin: 0 10vw;
+    font-size: 6.4rem;
+    width: 80vw;
+  }
+
   #work {
     padding: 88px 0;
   }
