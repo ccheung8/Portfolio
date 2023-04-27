@@ -761,10 +761,18 @@ div[class$="card"]:nth-child(-n + 2) {
 
 .arrow-dots button {
   font-size: 2.4rem;
-  color: var(--case-light);
   cursor: pointer;
   border: none;
+}
+
+.case-section:nth-child(odd) .arrow-dots button {
+  color: var(--case-light);
   background-color: var(--dark);
+}
+
+.case-section:nth-child(even) .arrow-dots button {
+  color: var(--dark);
+  background-color: var(--case-light);
 }
 
 .dot {
@@ -772,11 +780,21 @@ div[class$="card"]:nth-child(-n + 2) {
   margin: 0 4px;
   height: 12px;
   width: 12px;
-  background-color: var(--case-light);
   border-radius: 50%;
 }
 
-.active-carousel {
+/* DARK BG */
+.case-section:nth-child(odd) .dot {
+  background-color: var(--case-light);
+}
+
+/* LIGHT BG */
+.case-section:nth-child(even) .dot {
+  background-color: var(--dark);
+}
+
+.case-section:nth-child(odd) .active-carousel,
+.case-section:nth-child(even) .active-carousel {
   background-color: var(--subtitle-color);
 }
 
@@ -816,6 +834,48 @@ div[class$="card"]:nth-child(-n + 2) {
   display: flex;
   justify-content: space-between;
   gap: 24px;
+}
+
+.case-img-container-lg img {
+  max-height: fit-content;
+}
+
+.final-container {
+  grid-column: 1 / span 12;
+  padding-top: 48px;
+}
+
+.final-images {
+  position: relative;
+}
+
+.final-img {
+  grid-column: 1 / span 6;
+  width: 100%;
+}
+
+.final-img img {
+  width: 100%;
+}
+
+.screen-description {
+  grid-column: 7 / span 6;
+  top: 104px;
+  align-self: flex-start;
+  padding-top: 40px;
+  padding-bottom: 64px;
+  padding-left: 40px;
+  position: sticky;
+}
+
+.screen-description h3 {
+  text-align: center;
+}
+
+.screen-description p {
+  margin-top: 8px;
+  max-width: 70ch;
+  text-align: left;
 }
 
 .case-paragraph {
