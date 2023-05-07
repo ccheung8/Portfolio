@@ -647,7 +647,24 @@ footer h6 {
   grid-column: 6 / span 7;
 }
 
-.case-section a {
+.case-section ul {
+  padding-left: 16px;
+}
+
+.case-section li {
+  font-size: 1.6rem;
+  line-height: 3.8rem;
+}
+
+.case-section:nth-child(even),
+.case-section:nth-child(even) a {
+  background-color: var(--case-light);
+  color: var(--dark);
+}
+
+.case-section:nth-child(odd),
+.case-section:nth-child(odd) a {
+  background-color: var(--dark);
   color: white;
 }
 
@@ -673,16 +690,6 @@ div[class$="card"]:nth-child(-n + 2) {
 
 .right-card {
   grid-column: 7 / span 6;
-}
-
-.case-section:nth-child(even) {
-  background-color: var(--case-light);
-  color: var(--dark);
-}
-
-.case-section:nth-child(odd) {
-  background-color: var(--dark);
-  color: white;
 }
 
 .empathy-quote {
