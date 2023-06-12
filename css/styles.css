@@ -608,7 +608,7 @@ footer h6 {
   opacity: .4;
 }
 
-/* CASE STUDIES */
+/** CASE STUDIES */
 #case-header {
   background-color: var(--dark);
 }
@@ -631,7 +631,6 @@ footer h6 {
   color: var(--subtitle-color);
   line-height: 3.2rem;
   font-weight: 400;
-  align-self: flex-start;
 }
 
 .case-section {
@@ -645,19 +644,27 @@ footer h6 {
   margin-bottom: 16px;
 }
 
-.case-section div {
-  margin-bottom: 32px;
+.case-section h3 {
+  margin-bottom: 8px;
 }
 
-.case-section p,
-.case-paragraph-alt div p {
+.case-section p {
   font-size: 1.8rem;
   line-height: 3.2rem;
   max-width: 70ch;
 }
 
-.case-paragraph-alt div h3 {
-  margin-bottom: 16px;
+.case-section > div,
+.case-section > img {
+  margin-bottom: 48px;
+}
+
+.case-section > div:last-child {
+  margin-bottom: 0px;
+}
+
+.case-section > img:last-child {
+  margin-bottom: 0;
 }
 
 .case-section ul {
@@ -667,6 +674,10 @@ footer h6 {
 .case-section li {
   font-size: 1.6rem;
   line-height: 3.8rem;
+}
+
+.case-section img {
+  max-width: 80%;
 }
 
 .case-section:nth-child(even),
@@ -681,6 +692,10 @@ footer h6 {
   color: white;
 }
 
+.div-before-img {
+  margin-bottom: 16px !important;
+}
+
 /* ALT FORMAT */
 .case-section-alt {
   padding: 128px 0;
@@ -692,7 +707,7 @@ footer h6 {
 .case-section-alt p {
   font-size: 1.8rem;
   line-height: 3.2rem;
-  width: 70ch;
+  max-width: 70ch;
 }
 
 .case-section-alt ul {
@@ -857,34 +872,49 @@ div[class$="card"]:nth-child(-n + 2) {
 }
 
 .other-pages {
-  grid-column: 1 / span 12;
-  margin-top: 72px;
+  margin-top: 64px;
 }
 
 .other-pages h2 {
   margin-bottom: 16px;
 }
 
+.other-pages-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-pages-img img {
+  align-self: center;
+}
+
+#heuristic img {
+  max-height: 150px;
+  margin-bottom: 16px;
+}
+
+#heuristic h5 {
+  margin-bottom: 8px;
+  line-height: 2.8rem;
+}
+
+#heuristic p {
+  max-width: 34ch;
+}
+
 .left-right-images-alt {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  margin-top: 64px;
 }
 
-.left-right-images-alt:first-of-type {
+.left-right-images-alt {
   margin-top: 24px;
 }
 
 .left-right-images-alt div > h3 {
   margin-bottom: 16px;
   text-align: center;
-}
-
-.left-right-images-alt img {
-  width: 100%;
-  object-fit: contain;
-  align-self: flex-start;
 }
 
 .left-right-images {
@@ -964,9 +994,12 @@ div[class$="card"]:nth-child(-n + 2) {
 .case-paragraph-alt {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: center;
-  padding-bottom: 72px;
+  gap: 16px;
+}
+
+.case-paragraph-alt h3 {
+  align-self: flex-start;
 }
 
 .case-paragraph-alt:last-child {
@@ -1041,9 +1074,10 @@ div[class$="card"]:nth-child(-n + 2) {
 .case-section ol {
   font-size: 1.8rem;
   font-family: "Karla", "Rubik", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  grid-column: 6 / span 7;
   margin: 0;
   line-height: 3.6rem;
+  margin-top: 8px;
+  padding-left: 16px;
 }
 
 .takeaways {
