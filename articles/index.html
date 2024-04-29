@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/34056e4715.js" crossorigin="anonymous"></script>
-  <title>Calvin.</title>
-  <link rel="stylesheet" media="screen" href="css/styles.css">
+  <title>Articles</title>
+  <link rel="stylesheet" media="screen" href="../css/styles.css">
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -15,13 +15,13 @@
   <div id="menu">
     <div class="menu-content">
       <ul>
-        <li><a href="/" class="active">Work</a></li>
+        <li><a href="/">Work</a></li>
         <!-- <li>
           <a href="playground/" id="play"><span class="letter">P</span><span class="letter">l</span><span class="letter">a</span><span class="letter">y</span></a>
         </li> -->
-        <li><a href="/articles/">Articles</a></li>
-        <li><a href="inspiration/">Inspiration</a></li>
-        <li><a href="about/">Me</a></li>
+        <li><a href="/articles/" class="active">Articles</a></li>
+        <li><a href="/inspiration/">Inspiration</a></li>
+        <li><a href="/about/">Me</a></li>
       </ul>
       <li class="social">
         <a href="mailto:calvincheung881@gmail.com" target="_blank">
@@ -41,12 +41,12 @@
   <header>
     <nav id="navbar">
       <div class="brand">
-        <a href="/"><img src="images/noto_panda.webp" alt="logo"></a>
+        <a href="/"><img src="../images/noto_panda.webp" alt="logo"></a>
       </div>
       <ul>
         <a href="/">
           <div class="link-container">
-            <li class="active">Work</li>
+            <li>Work</li>
           </div>
         </a>
         <!-- <a href="/playground" id="play">
@@ -58,7 +58,7 @@
         </a> -->
         <a href="/articles/">
           <div class="link-container">
-            <li>Articles</li>
+            <li class="active">Articles</li>
           </div>
         </a>
         <a href="/inspiration/">
@@ -84,71 +84,20 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div id="left-side" class="side">
-      <h2 class="title">
-        Hey I'm Calvin, a human-centered 
-        <span class="fancy">designer</span>
-      </h2>
-    </div>
-    <div id="right-side" class="side">
-      <h2 class="title">
-        Hey I'm Calvin, a human-centered 
-        <span class="fancy">developer</span>
-      </h2>
-    </div>
-  </section>
-
   <!-- Work Section -->
   <main>
     <section id="work">
       <div class="work-item">
         <div class="work-thumbnail">
-          <a href="Jewels_by_the_Sea.html">
-            <img src="images/jewelsbythesea.webp" alt="jewels by the sea case study thumbnail" class="fit">
+          <a href="https://medium.com/@bigfatpanda/the-case-for-lams-179f05ae4ab9" target="_blank">
+            <img src="/images/lamb.webp" alt="The Case for LAMs featured image" class="fit">
           </a>
         </div>
         <div class="work-content display">
           <div class="work-info">
-            <h3>Jewels by the Sea</h3>
-            <h5 class="work-caption">Hand-picked, eclectic jewelry.</h5>
+            <h3>The Case for LAMs</h3>
+            <h5 class="work-caption">A UX Designer's Perspective</h5>
           </div>
-          <p class="work-description">
-            An end to end freelance design project I did for a local jewelry shop located in La Jolla Shores.
-          </p>
-        </div>
-      </div>
-      <div class="work-item">
-        <div class="work-thumbnail">
-          <a href="Boba_Bar.html">
-            <img src="images/boba_bar.png" alt="boba bar case study thumbnail" class="fit">
-          </a>
-        </div>
-        <div class="work-content display">
-          <div class="work-info">
-            <h3>Boba Bar and Desserts</h3>
-            <h5 class="work-caption">One-Stop-Shop for Boba & Desserts</h5>
-          </div>
-          <p class="work-description">
-            A design and front-end development(IN PROGRESS) project I did Boba Bar and Desserts.
-          </p>
-        </div>
-      </div>
-      <div class="work-item">
-        <div class="work-thumbnail">
-            <a href="/TransFamily_Support_Services.html">
-              <img class="fit" src="images/tfss_thumb.webp" alt="transfamily support services case study thumbnail">
-            </a>
-          </div>
-        <div class="work-content display">
-          <div class="work-info">
-            <h3>TransFamily Support Services</h3>
-            <h5 class="work-caption">Navigation for the Journey.</h5>
-          </div>
-          <p class="work-description">
-            A project I did for a local non-profit in San Diego as part of a summer design and marketing initiative.
-          </p>
         </div>
       </div>
     </section>
@@ -174,7 +123,7 @@
       </li>
     </div>
   </footer>
-  <script src="scripts/index.js"></script>
+  <script src="../scripts/index.js"></script>
   <script type="module">
     const left = document.getElementById("left-side");
     const hero = document.getElementById("hero");
