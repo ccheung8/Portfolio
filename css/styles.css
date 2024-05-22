@@ -578,6 +578,9 @@ footer h6 {
   transition: opacity 500ms ease;
   z-index: 3;
   pointer-events: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #icon {
@@ -606,6 +609,26 @@ footer h6 {
 
 #playground-header.toggled > #icon {
   opacity: .4;
+}
+
+#playground {
+  padding: 64px 72px;
+}
+
+.playground-item {
+  grid-column: 1 / span 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.playground-item h3, .playground-item-right h3 {
+  margin-top: 16px;
+}
+
+.playground-item-right {
+  display: flex;
+  flex-direction: column;
+  grid-column: 7 / span 6;
 }
 
 /** CASE STUDIES */
@@ -1358,6 +1381,12 @@ div[class$="card"]:nth-child(-n + 2) {
     font-size: 7vw;
     width: 100%;
     text-align: center;
+  }
+
+  #playground {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
   /* INSPIRATION */
