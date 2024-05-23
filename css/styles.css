@@ -1132,6 +1132,8 @@ div[class$="card"]:nth-child(-n + 2) {
 }
 
 .graphic-images-container {
+  -moz-columns: 350px 3;
+  -moz-column-gap: 24px;
   columns: 350px 3;
   column-gap: 24px;
 }
