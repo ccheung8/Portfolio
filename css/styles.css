@@ -110,7 +110,7 @@ nav {
   justify-content: space-between;
   padding: 0 5%;
   position: fixed;
-  z-index: 3;
+  z-index: 5;
   transition: top .2s;
   -moz-transition: top .2s;
 }
@@ -1129,6 +1129,20 @@ div[class$="card"]:nth-child(-n + 2) {
 
 .takeaways p:last-child {
   margin-bottom: 0;
+}
+
+.graphic-images-container {
+  columns: 350px 3;
+  column-gap: 24px;
+}
+
+.graphic-images-container img {
+  max-width: 100%;
+  filter: drop-shadow(2px 4px 6px #000);
+}
+
+.graphic-images-container > * {
+  margin-bottom: 24px;
 }
 
 /* TABLET */
